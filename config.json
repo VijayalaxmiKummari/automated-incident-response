@@ -1,0 +1,15 @@
+{
+  "splunk": {
+    "host": "localhost",
+    "port": 8089,
+    "username": "admin",
+    "app": "soc_lab",
+    "verify_tls": false,
+    "earliest": "-24h"
+  },
+  "saved_search_prefix": "SOC Lab - ",
+  "threat_intel_file": "data/threat_intel.csv",
+  "internal_networks": ["10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16", "127.0.0.0/8"],
+  "allowlist": ["192.168.1.10"],
+  "block_threshold": 60
+}

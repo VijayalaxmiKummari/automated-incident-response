@@ -1,0 +1,8 @@
+# Sends every automated response action back into Splunk, so the SOC can see
+# what the automation did next to the alerts that triggered it.
+# setup-guide.md shows how to install this with one command.
+
+[monitor:///CHANGE/ME/automated-incident-response/output/response_actions.log]
+index = soc_lab
+sourcetype = air:actions
+disabled = false

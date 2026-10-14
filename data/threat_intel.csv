@@ -1,0 +1,5 @@
+ip,score,tags,first_seen,source
+203.0.113.45,95,ssh-bruteforce;botnet,2026-09-02,local feed
+198.51.100.23,70,password-spray;scanner,2026-08-17,local feed
+203.0.113.99,80,web-scanner;sqlmap,2026-09-20,local feed
+192.0.2.200,40,tor-exit,2026-07-01,local feed

