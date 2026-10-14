@@ -133,3 +133,13 @@ These cover correlation, scoring, the "never block internal or allowlisted" rule
 Python 3 (standard library), Splunk Enterprise REST API, SPL, MITRE ATT&CK, pf firewall rules, macOS
 
 All attacker IPs come from the reserved documentation ranges (RFC 5737), so none of them belong to real systems.
+
+## Screenshots
+
+**Every automated action logged back into Splunk** (`sourcetype=air:actions`)
+
+![Response actions in Splunk](screenshots/splunk-actions.png)
+
+**Unit tests**
+
+![Tests passing](screenshots/tests.png)
