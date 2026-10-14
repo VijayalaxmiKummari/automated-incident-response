@@ -143,3 +143,13 @@ All attacker IPs come from the reserved documentation ranges (RFC 5737), so none
 **Unit tests**
 
 ![Tests passing](screenshots/tests.png)
+
+## Screenshots
+
+**Every automated action logged back into Splunk** (`sourcetype=air:actions`)
+
+![Response actions in Splunk](screenshots/splunk-actions.png)
+
+**Unit tests**
+
+![Tests passing](screenshots/tests.png)
