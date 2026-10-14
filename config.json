@@ -5,7 +5,7 @@
     "username": "admin",
     "app": "soc_lab",
     "verify_tls": false,
-    "earliest": "-24h"
+    "earliest": "-15m"
   },
   "saved_search_prefix": "SOC Lab - ",
   "threat_intel_file": "data/threat_intel.csv",

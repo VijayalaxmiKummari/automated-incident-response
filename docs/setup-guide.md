@@ -44,7 +44,7 @@ cd ~/automated-incident-response
 python3 respond.py
 ```
 
-Enter your Splunk admin password when asked (it is not shown as you type). The tool reads the six SOC Lab detections from Splunk, runs them over the last 24 hours, and responds.
+Enter your Splunk admin password when asked (it is not shown as you type). The tool reads the six SOC Lab detections from Splunk, runs them over the last 15 minutes (the same window the detections are designed for), and responds.
 
 Run it a second time: it should say **No new incidents**, because it remembers what it has already handled.
 
@@ -64,7 +64,7 @@ cp splunk/props.conf /Applications/Splunk/etc/apps/soc_lab/local/props.conf
 /Applications/Splunk/bin/splunk restart
 ```
 
-Then in Splunk, search over the last 24 hours:
+Then in Splunk, search over the last 15 minutes (the same window the detections are designed for):
 
 ```spl
 index=soc_lab sourcetype=air:actions
